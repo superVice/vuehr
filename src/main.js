@@ -18,6 +18,8 @@ import store from './store'
 import {initMenu} from './utils/menus';
 import 'font-awesome/css/font-awesome.min.css'
 
+import NProgress from 'nprogress' // 引入nprogress插件
+import 'nprogress/nprogress.css'  // 这个nprogress样式必须引入
 
 
 //封装请求方法
@@ -43,17 +45,20 @@ router.beforeEach((to,from,next)=>{
     //如果已登录
     if(window.sessionStorage.getItem("user")){
       initMenu(router,store); //初始化菜单
+      NProgress.start() // 设置加载进度条(开始..)
       next();
     }else //没有登陆则转到登陆页面
     {
       //console.log(to)
       next("/?redirect="+to.path) //登陆后转到登陆前请求的地址
     }
-   
   }
-     
-  
 })
+
+router.afterEach(() =>{
+  NProgress.done()
+})
+
 
 new Vue({
   router, 

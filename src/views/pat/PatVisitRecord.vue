@@ -57,6 +57,21 @@
         <el-tab-pane label="随访症状" name="second" v-if="dialogVisible">
           <RecordZz v-bind:record_id="recordId"></RecordZz>
         </el-tab-pane>
+        <el-tab-pane label="生活方式" name="three" v-if="dialogVisible">
+          <RecordShfs v-bind:record_id="recordId"></RecordShfs>
+        </el-tab-pane>
+        <el-tab-pane label="体征与体格检查" name="four" v-if="dialogVisible">
+          <RecordTzytg v-bind:record_id="recordId"></RecordTzytg>
+        </el-tab-pane>
+         <el-tab-pane label="检测结果（电话随访可不填）" name="five" v-if="dialogVisible">
+          <RecordJcjg v-bind:record_id="recordId"></RecordJcjg>
+        </el-tab-pane>
+        <el-tab-pane label="治疗药物A(心血管药物)" name="six" v-if="dialogVisible">
+          <RecordZlywA v-bind:record_id="recordId"></RecordZlywA>
+        </el-tab-pane>
+        <el-tab-pane label="治疗药物B(非心血管药物)" name="six" v-if="dialogVisible">
+          <RecordZlywB v-bind:record_id="recordId"></RecordZlywB>
+        </el-tab-pane>
       </el-tabs>
     </el-dialog>
 
@@ -71,6 +86,11 @@
 import RecordBase from "../../components/pat/basic/RecordBase";
 import RecordZz from "../../components/pat/basic/RecordZz";
 import RecordAdd from "../../components/pat/basic/RecordAdd";
+import RecordShfs from "../../components/pat/basic/RecordShfs";
+import RecordTzytg from "../../components/pat/basic/RecordTzytg";
+import RecordJcjg from "../../components/pat/basic/RecordJcjg";
+import RecordZlywA from "../../components/pat/basic/RecordZlywA";
+import RecordZlywB from "../../components/pat/basic/RecordZlywB";
 
 export default {
   name: "patVisitRecord",
@@ -96,7 +116,12 @@ export default {
   components: {
     RecordBase,
     RecordZz,
-    RecordAdd
+    RecordAdd,
+    RecordShfs,
+    RecordTzytg,
+    RecordJcjg,
+    RecordZlywA,
+    RecordZlywB
   },
   methods: {
     getSave(msg){

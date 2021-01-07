@@ -1,11 +1,11 @@
 <template>
   <div>
-    <el-form ref="formZz" :model="formZz" label-width="150px" label-position="left" :inline="true">
+    <el-form ref="formZz" :model="formZz" label-width="180px" label-position="left" :inline="true">
       <!-- 患者症状 -->
       <el-row>
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
-            <el-form-item label="乏力与疲劳" class="item">
+          <div class="grid-content ">
+            <el-form-item label="1. 乏力与疲劳" class="item">
               <el-select v-model="formZz.hzzz['乏力与疲劳']" placeholder="请选择乏力与疲劳" clearable>
                 <el-option v-for="item in oneweek_template_data.症状.乏力与疲劳" :key="item" :value="item"></el-option>
               </el-select>
@@ -14,8 +14,8 @@
         </el-col>
 
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
-            <el-form-item label="气短/呼吸困难" class="item">
+          <div class="grid-content ">
+            <el-form-item label="2. 气短/呼吸困难" class="item">
               <el-select v-model="formZz.hzzz['气短/呼吸困难']" placeholder="请选择气短/呼吸困难">
                 <el-option
                   v-for="item in oneweek_template_data.症状['气短/呼吸困难']"
@@ -27,8 +27,8 @@
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
-            <el-form-item label="活动能力" class="item">
+          <div class="grid-content ">
+            <el-form-item label="3. 活动能力" class="item">
               <el-select v-model="formZz.hzzz['活动能力']" placeholder="请选择活动能力">
                 <el-option v-for="item in oneweek_template_data.症状.活动能力" :key="item" :value="item"></el-option>
               </el-select>
@@ -36,8 +36,8 @@
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
-            <el-form-item label="自理能力" class="item">
+          <div class="grid-content ">
+            <el-form-item label="4. 自理能力" class="item">
               <el-select v-model="formZz.hzzz['自理能力']" placeholder="请选择自理能力">
                 <el-option v-for="item in oneweek_template_data.症状.自理能力" :key="item" :value="item"></el-option>
               </el-select>
@@ -45,8 +45,8 @@
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
-            <el-form-item label="日常活动" class="item">
+          <div class="grid-content ">
+            <el-form-item label="5. 日常活动" class="item">
               <el-select v-model="formZz.hzzz['日常活动']" placeholder="请选择日常活动">
                 <el-option v-for="item in oneweek_template_data.症状.日常活动" :key="item" :value="item"></el-option>
               </el-select>
@@ -54,8 +54,8 @@
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
-            <el-form-item label="其它躯体不适" class="item">
+          <div class="grid-content ">
+            <el-form-item label="6. 其它躯体不适" class="item">
               <el-select v-model="formZz.hzzz['其它躯体不适']" placeholder="请选择其它躯体不适">
                 <el-option
                   v-for="item in oneweek_template_data.症状.其它躯体不适"
@@ -67,8 +67,8 @@
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
-            <el-form-item label="焦虑/抑郁" class="item">
+          <div class="grid-content ">
+            <el-form-item label="7. 焦虑/抑郁" class="item">
               <el-select v-model="formZz.hzzz['焦虑/抑郁']" placeholder="请选择焦虑/抑郁">
                 <el-option
                   v-for="item in oneweek_template_data.症状['焦虑/抑郁']"
@@ -80,15 +80,15 @@
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple">
-            <el-form-item label="生活质量自评(分)" class="item">
+          <div class="grid-content ">
+            <el-form-item label="8. 生活质量自评(分)" class="item">
               <el-input v-model="formZz.hzzz['生活质量自评']" placeholder="请输入生活质量自评" maxlength="4"></el-input>
             </el-form-item>
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
-            <el-form-item label="充血性心力衰竭症状" class="item">
+          <div class="grid-content ">
+            <el-form-item label="9. 充血性心力衰竭症状" class="item">
               <el-select v-model="formZz.hzzz['充血性心力衰竭症状']" placeholder="请选择充血性心力衰竭症状">
                 <el-option
                   v-for="item in oneweek_template_data.症状['充血性心力衰竭症状']"
@@ -100,7 +100,7 @@
           </div>
         </el-col>
         <el-col :span="8">
-          <div class="grid-content bg-purple-light">
+          <div class="grid-content ">
             <el-form-item label="心力衰竭症状等级" class="item">
               <el-select v-model="formZz.hzzz['心力衰竭症状等级']" placeholder="请选择心力衰竭症状等级">
                 <el-option
@@ -112,6 +112,10 @@
             </el-form-item>
           </div>
         </el-col>
+      </el-row>
+      <el-row>
+<el-tag style="margin-right: 5px; margin-bottom: 10px" type="danger"
+            >* 8. 生活质量自评0-100分，0为生活质量最低，100为最高！</el-tag>
       </el-row>
 
       <el-form-item>
