@@ -69,7 +69,7 @@
         <el-tab-pane label="治疗药物A(心血管药物)" name="six" v-if="dialogVisible">
           <RecordZlywA v-bind:record_id="recordId"></RecordZlywA>
         </el-tab-pane>
-        <el-tab-pane label="治疗药物B(非心血管药物)" name="six" v-if="dialogVisible">
+        <el-tab-pane label="治疗药物B(非心血管药物)" name="seven" v-if="dialogVisible">
           <RecordZlywB v-bind:record_id="recordId"></RecordZlywB>
         </el-tab-pane>
       </el-tabs>
