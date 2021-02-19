@@ -2561,7 +2561,7 @@
 <script>
 export default {
   name: "RecordAdd",
-  props: ["patient_id"],
+  props: ["base_id"],
   data() {
     return {
       activeNames: "sqlllj",
@@ -3010,7 +3010,7 @@ export default {
     },
     resetForm() {},
     submitForm(formName) {
-      this.formAdd.patient_id = this.patient_id;
+      this.formAdd.base_id = this.base_id;
       // var formData = JSON.stringify(this.formAdd);
       this.$refs[formName].validate((valid) => {
         if (valid) {

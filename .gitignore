@@ -21,3 +21,5 @@ yarn-error.log*
 *.sw?
 package-lock.json
 package-lock.json
+src/views/pat/PatVisitBase copy.vue
+src/views/pat/PatVisitRecord copy.vue
